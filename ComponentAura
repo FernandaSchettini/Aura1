@@ -1,0 +1,45 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	
+    <div class="slds-grid slds-gutters" >
+    <div class="slds-box">
+    <span><lightning:button variant="destructive" label="Destructive" title="Destructive action" onclick="{! c.handleClick }"/></span>
+    </div>
+    <div class="slds-box">
+    <span><lightning:button label="Semente" title="Semente" onclick="{! c.hClick }" /></span>
+    </div>
+    <div class="slds-box">    
+    <span><lightning:button variant="brand" label="Plantinha" title="Plantinha" onclick="{! c.haClick }" /></span>
+    </div>
+    <div class="slds-box">
+        <span><lightning:button variant="success" label="Girassol" title="Girassol" onclick="{! c.hanClick }" /></span>
+    </div>
+    </div>
+
+<!--Botao 4-->
+	<aura:attribute name="modificaTudo" type="Boolean" default="true" description="True or False"> </aura:attribute>
+    
+    <!--Semente-->
+    <aura:attribute name="semente" type="Boolean" default="true" description="True or False"> </aura:attribute>
+    <div class="slds-box">
+    <aura:if isTrue="{!v.semente}">
+    <img src="{!$Resource.Semente}"/>
+    </aura:if>
+    </div>
+    
+    <!--Plantinha-->
+  <aura:attribute name="plantinha" type="Boolean" default="true" description="True or False"> </aura:attribute>
+    <div class="slds-box">
+    <aura:if isTrue="{!v.plantinha}"><img src="{!$Resource.Plantinha}"/>
+    </aura:if>
+    </div>
+    
+    
+    <!--Girassol-->
+    <aura:attribute name="planta" type="Boolean" default="true" description="True or False"> </aura:attribute>
+    <div class="slds-box">
+    <aura:if isTrue="{!v.planta}">
+    <img src="{!$Resource.Girassol}"/>
+    </aura:if>
+    </div>
+   
+</aura:component>
