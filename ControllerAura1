@@ -1,0 +1,29 @@
+({
+	hClick : function(component, event, helper) {
+		var semente = component.get("v.semente");
+        component.set("v.semente", !semente);
+},
+
+	haClick : function(component, event, helper) {
+		
+		var plantinha = component.get("v.plantinha");
+        component.set("v.plantinha", !plantinha);
+       
+},
+    hanClick : function(component, event, helper) {
+    var planta = component.get("v.planta");
+    component.set("v.planta", !planta);
+        
+ },
+    handleClick : function(component, event, helper) {
+    	var modificaTudo = component.get("v.modificaTudo");
+        
+        component.set("v.planta", !modificaTudo);
+        component.set("v.semente", !modificaTudo);
+        component.set("v.plantinha", !modificaTudo);
+        
+        component.set("v.modificaTudo", !modificaTudo);
+        
+    }
+   }
+)
